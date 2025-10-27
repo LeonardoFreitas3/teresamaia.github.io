@@ -1,0 +1,163 @@
+{
+  "nav.home": "Accueil",
+  "nav.about": "À propos",
+  "nav.gallery": "Galerie",
+  "nav.services": "Services",
+  "nav.prices": "Tarifs",
+  "nav.testimonials": "Témoignages",
+  "nav.contacts": "Contacts",
+
+  "hero.title": "Teresa Maia",
+  "hero.subtitle": "Massothérapie holistique pour le corps, l’esprit et le bien-être.",
+  "hero.button": "Réserver une séance",
+
+  "about.title": "À propos",
+  "about.lead": "TM Massothérapeute propose des séances personnalisées alliant techniques manuelles et approche naturelle et humaine, favorisant la relaxation, l’alignement et la récupération.",
+  "about.card1.title": "Approche holistique",
+  "about.card1.body": "Nous prenons soin du corps et de l’esprit comme d’un tout intégré.",
+  "about.card2.title": "Accompagnement personnalisé",
+  "about.card2.body": "Chaque séance est adaptée à vos besoins spécifiques.",
+
+  "why.title": "Pourquoi nous choisir",
+  "why.card1.title": "Confiance & professionnalisme",
+  "why.card1.body": "Certifiée et forte de plusieurs années d’expérience.",
+  "why.card2.title": "Horaires en soirée",
+  "why.card2.body": "Prise de rendez-vous facilitée.",
+  "why.card3.title": "Séances personnalisées",
+  "why.card3.body": "Adaptées à vos besoins spécifiques.",
+  "why.card4.title": "Ambiance calme",
+  "why.card4.body": "Un espace paisible pour une détente totale.",
+
+  "gallery.title": "Galerie",
+
+  "prices.title": "Tarifs",
+  "prices.cta": "Réserver",
+  "prices.hl1.title": "Massage thérapeutique",
+  "prices.hl1.desc": "Soulage les douleurs musculaires et corrige les tensions spécifiques.",
+  "prices.hl1.price": "17 €",
+  "prices.hl2.title": "Massage de relaxation",
+  "prices.hl2.desc": "Réduction du stress, relaxation générale et bien-être.",
+  "prices.hl2.price": "20 €",
+  "prices.hl3.title": "Séance de Reiki",
+  "prices.hl3.desc": "Équilibrage énergétique et harmonisation émotionnelle.",
+  "prices.hl3.price": "30 €",
+
+  "prices.filters.all": "Tous",
+  "prices.filters.mente": "Esprit",
+  "prices.filters.rosto": "Visage",
+  "prices.filters.corpo": "Corps",
+  "prices.search.placeholder": "Rechercher un service…",
+  "prices.search.sronly": "Rechercher des services",
+
+  "serviceslist.reiki.title": "Séance de Reiki",
+  "serviceslist.reiki.price": "30 €",
+  "serviceslist.reiki.desc": "Séance d’harmonisation énergétique.",
+
+  "serviceslist.clean.title": "Nettoyage de peau",
+  "serviceslist.clean.price": "15 €",
+  "serviceslist.clean.desc": "Hygiénisation et revitalisation de la peau.",
+
+  "serviceslist.acne.title": "Traitement de l’acné",
+  "serviceslist.acne.price": "25 €",
+  "serviceslist.acne.desc": "Atténuation des lésions acnéiques.",
+
+  "serviceslist.wrinkles.title": "Traitement des rides",
+  "serviceslist.wrinkles.price": "25 €",
+  "serviceslist.wrinkles.desc": "Lissage des ridules.",
+
+  "serviceslist.spots.title": "Traitement des taches cutanées",
+  "serviceslist.spots.price": "25 €",
+  "serviceslist.spots.desc": "Uniformisation du teint.",
+
+  "serviceslist.relax.title": "Massage de relaxation",
+  "serviceslist.relax.price": "20 €",
+  "serviceslist.relax.desc": "Réduction du stress et des tensions.",
+
+  "serviceslist.thera.title": "Massage thérapeutique",
+  "serviceslist.thera.price": "17 €",
+  "serviceslist.thera.desc": "Travail spécifique des tissus.",
+
+  "serviceslist.sport.title": "Massage sportif",
+  "serviceslist.sport.price": "20 €",
+  "serviceslist.sport.desc": "Préparation / récupération musculaire.",
+
+  "serviceslist.preg.title": "Massage pour femmes enceintes",
+  "serviceslist.preg.price": "20 €",
+  "serviceslist.preg.desc": "Confort et soulagement pendant la grossesse.",
+
+  "serviceslist.model.title": "Massage modelant",
+  "serviceslist.model.price": "20 €",
+  "serviceslist.model.desc": "Modelage des contours corporels.",
+
+  "serviceslist.lymph.title": "Drainage lymphatique",
+  "serviceslist.lymph.price": "30 €",
+  "serviceslist.lymph.desc": "Stimulation du système lymphatique.",
+
+  "serviceslist.chiro.title": "Chiropraxie",
+  "serviceslist.chiro.price": "30 €",
+  "serviceslist.chiro.desc": "Ajustements et mobilisations articulaires.",
+
+  "serviceslist.bride.title": "Forfait Mariées",
+  "serviceslist.bride.price": "35 €",
+  "serviceslist.bride.desc": "Programme spécial avant événement.",
+
+  "serviceslist.pregpack.title": "Forfait Grossesse (6 mois)",
+  "serviceslist.pregpack.price": "780 €",
+  "serviceslist.pregpack.desc": "Accompagnement complet pendant la grossesse.",
+
+  "services.title": "Services",
+  "services.card1.title": "Massage de relaxation",
+  "services.card1.body": "Soulage le stress et libère les tensions accumulées.",
+  "services.card1.time": "60–90 minutes",
+
+  "services.card2.title": "Massage thérapeutique",
+  "services.card2.body": "Travaille des zones spécifiques et favorise l’équilibre postural.",
+  "services.card2.time": "60–90 minutes",
+
+  "services.card3.title": "Massages en entreprise",
+  "services.card3.body": "Séances de relaxation et de productivité en milieu professionnel.",
+  "services.card3.time": "Sur devis",
+
+  "partners.title": "Partenariats",
+  "partners.p1.title": "Parapharmacie Farma Bouro",
+  "partners.p1.place": "Bouro Santa Maria, Amares — Braga",
+  "partners.p1.body": "Collaboration dans des programmes de bien-être et de santé naturelle.",
+  "partners.p2.title": "Clinique Dentaire Dr Marina Macedo",
+  "partners.p2.place": "Ferreiros, Amares — Braga",
+  "partners.p2.body": "Partenariat axé sur des thérapies complémentaires pour la détente et l’équilibre.",
+  "partners.cta": "Je suis une entreprise — Demander un devis",
+
+  "testimonials.title": "Témoignages",
+  "testimonials.t1.name": "Pedro Carmo",
+  "testimonials.t1.body": "Professionnalisme, dévouement et sympathie. Je recommande vivement cet espace harmonieux, idéal pour se détendre et trouver son moment zen.",
+  "testimonials.t2.name": "Ana Raquel",
+  "testimonials.t2.body": "Je recommande vivement. Disponibilité en dehors des horaires habituels, un vrai plus pour ceux qui ont peu de disponibilité et de flexibilité.",
+
+  "contact.title": "Réserver une séance",
+  "contact.mode.label": "Type de rendez-vous",
+  "contact.mode.private": "Particulier",
+  "contact.mode.company": "Je suis une entreprise",
+  "contact.form.name": "Nom",
+  "contact.form.email": "Email",
+  "contact.form.phone": "Téléphone",
+  "contact.form.message": "Message",
+  "contact.form.quote": "Demander un devis",
+  "contact.form.helper": "Ce champ est prérempli pour accélérer votre demande.",
+  "contact.submit": "Envoyer la demande de rendez-vous",
+
+  "contact.info.title": "Informations de contact",
+  "contact.info.email": "Email",
+  "contact.info.phone": "Téléphone",
+  "contact.info.hours": "Horaires",
+  "contact.info.weekdays": "Lundi–Vendredi",
+  "contact.info.weekdays.hours": "10:00–22:00",
+  "contact.info.sat": "Samedi",
+  "contact.info.sat.hours": "10:00–19:00",
+  "contact.info.sun": "Dimanche",
+  "contact.info.sun.hours": "Fermé",
+  "contact.info.location": "Localisation",
+  "contact.info.address": "Rua São Pedro Fins, nº40, 4720-092<br />Braga, Portugal",
+  "contact.info.note": "Sur rendez-vous. Possibilité d’horaires étendus selon disponibilité.",
+
+  "footer.copy": "&copy; 2025 Teresa Maia – Massothérapeute. Tous droits réservés."
+}
