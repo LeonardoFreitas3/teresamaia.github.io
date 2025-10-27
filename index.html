@@ -50,14 +50,17 @@
       <div
         class="container mx-auto px-6 py-4 flex justify-between items-center"
       >
+        <!-- LOGO -->
         <a href="#inicio" class="flex items-center space-x-2">
           <img
+            src="/img/TM-logo-nobackground.png"
             alt="TM Logo"
             class="h-20 w-auto"
             loading="lazy"
-            src="img/TM-logo-nobackground.png"
           />
         </a>
+
+        <!-- MENU DESKTOP -->
         <div class="hidden md:flex items-center space-x-8">
           <a
             href="#inicio"
@@ -101,19 +104,115 @@
             data-i18n="nav.contacts"
             >Contactos</a
           >
+
+          <!-- BOTÃO DE IDIOMA (DESKTOP) -->
           <button
             id="languageToggle"
-            class="ml-4 px-3 py-1 bg-sage text-white rounded-full text-sm hover:bg-sage/90 transition flex items-center space-x-2"
+            class="ml-4 flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 transition font-medium"
+            aria-label="Mudar idioma"
           >
-            <span>PT</span>
-            <i data-feather="refresh-cw" class="w-4 h-4"></i>
+            <span id="langLeft" class="text-sage font-semibold">PT</span>
+            <span class="text-gray-500">↔</span>
+            <span id="langRight" class="text-gray-700">FR</span>
           </button>
         </div>
-        <button class="md:hidden">
+
+        <!-- BOTÃO HAMBURGER (MOBILE) -->
+        <button
+          id="openMobileMenu"
+          class="md:hidden p-2 rounded-lg hover:bg-gray-100"
+          aria-label="Abrir menu"
+        >
           <i data-feather="menu"></i>
         </button>
       </div>
     </nav>
+
+    <!-- =================== OVERLAY + DRAWER (MOBILE) =================== -->
+    <!-- Overlay -->
+    <div
+      id="mobileOverlay"
+      class="fixed inset-0 bg-black/40 opacity-0 pointer-events-none transition-opacity z-40 md:hidden"
+    ></div>
+
+    <!-- Drawer -->
+    <aside
+      id="mobileDrawer"
+      class="fixed top-0 left-0 h-screen w-72 bg-white shadow-2xl -translate-x-full transition-transform duration-300 z-50 md:hidden"
+    >
+      <div class="h-full flex flex-col">
+        <!-- Header do Drawer -->
+        <div class="flex items-center justify-between px-5 py-4 border-b">
+          <span class="font-semibold">Menu</span>
+          <button
+            id="closeMobileMenu"
+            class="p-2 rounded-lg hover:bg-gray-100"
+            aria-label="Fechar menu"
+          >
+            <i data-feather="x"></i>
+          </button>
+        </div>
+
+        <!-- Itens do Menu -->
+        <nav class="flex-1 px-5 py-4 space-y-1">
+          <a
+            href="#inicio"
+            class="block px-3 py-2 rounded-lg hover:bg-gray-100"
+            data-i18n="nav.home"
+            >Início</a
+          >
+          <a
+            href="#sobre"
+            class="block px-3 py-2 rounded-lg hover:bg-gray-100"
+            data-i18n="nav.about"
+            >Sobre</a
+          >
+          <a
+            href="#galeria"
+            class="block px-3 py-2 rounded-lg hover:bg-gray-100"
+            data-i18n="nav.gallery"
+            >Galeria</a
+          >
+          <a
+            href="#servicos"
+            class="block px-3 py-2 rounded-lg hover:bg-gray-100"
+            data-i18n="nav.services"
+            >Serviços</a
+          >
+          <a
+            href="#precos"
+            class="block px-3 py-2 rounded-lg hover:bg-gray-100"
+            data-i18n="nav.prices"
+            >Preços</a
+          >
+          <a
+            href="#testemunhos"
+            class="block px-3 py-2 rounded-lg hover:bg-gray-100"
+            data-i18n="nav.testimonials"
+            >Testemunhos</a
+          >
+          <a
+            href="#contactos"
+            class="block px-3 py-2 rounded-lg hover:bg-gray-100"
+            data-i18n="nav.contacts"
+            >Contactos</a
+          >
+        </nav>
+
+        <!-- Botão de Idioma (Mobile) -->
+        <div class="border-t px-5 py-4">
+          <button
+            id="languageToggleMobile"
+            class="w-full flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 transition font-medium"
+            aria-label="Mudar idioma"
+          >
+            <span id="langLeftMobile" class="text-sage font-semibold">PT</span>
+            <span class="text-gray-500">↔</span>
+            <span id="langRightMobile" class="text-gray-700">FR</span>
+          </button>
+        </div>
+      </div>
+    </aside>
 
     <!-- Hero Section -->
     <section
@@ -123,7 +222,7 @@
     >
       <!-- Camada translúcida de cor para contraste -->
       <div
-        class="absolute inset-0 bg-gradient-to-b from-white/80 via-light-blue/30 to-white/80"
+        class="absolute inset-0 bg-gradient-to-b from-white/60 via-light-blue/30 to-white/80"
       ></div>
 
       <!-- Conteúdo -->
@@ -239,7 +338,7 @@
               Horário Noturno
             </h3>
             <p class="text-gray-600" data-i18n="why.card2.body">
-              Facilidade em marcação de horário
+              Facilidade em marcação de horário.
             </p>
           </div>
           <div class="text-center">
@@ -1009,19 +1108,22 @@
                   >Tipo de marcação</span
                 >
                 <div class="flex gap-2">
+                  <!-- Cliente -->
                   <button
                     type="button"
                     id="optParticular"
-                    class="px-4 py-2 rounded-full border border-gray-300 aria-pressed:ring-2 aria-pressed:ring-sage"
+                    class="px-4 py-2 rounded-full border border-gray-300 transition aria-pressed:border-sage aria-pressed:text-sage aria-pressed:bg-sage/10 aria-pressed:ring-2 aria-pressed:ring-sage"
                     aria-pressed="true"
                     data-i18n="contact.mode.private"
                   >
-                    Particular
+                    Cliente
                   </button>
+
+                  <!-- Empresa -->
                   <button
                     type="button"
                     id="optEmpresa"
-                    class="px-4 py-2 rounded-full border border-gray-300"
+                    class="px-4 py-2 rounded-full border border-gray-300 transition aria-pressed:border-sage aria-pressed:text-sage aria-pressed:bg-sage/10 aria-pressed:ring-2 aria-pressed:ring-sage"
                     aria-pressed="false"
                     data-i18n="contact.mode.company"
                   >
@@ -1303,7 +1405,9 @@
     </footer>
 
     <script>
-      const languageToggle = document.getElementById("languageToggle");
+      /* =========================
+     I18N (PT ↔ FR)
+  ========================== */
       let currentLanguage = "pt";
 
       async function loadLanguage(lang) {
@@ -1312,53 +1416,65 @@
           if (!res.ok) throw new Error("Ficheiro de idioma não encontrado");
           const t = await res.json();
 
+          // Substitui textos dos elementos
           document.querySelectorAll("[data-i18n]").forEach((el) => {
             const key = el.getAttribute("data-i18n");
-            if (t[key] !== undefined) el.innerHTML = t[key];
+            if (t[key] !== undefined) el.textContent = t[key];
           });
 
-          document.querySelectorAll("[data-i18n-attr]").forEach((el) => {
-            const attrSpec = el.getAttribute("data-i18n-attr");
-            const pairs = attrSpec
-              .split(",")
-              .map((s) => s.trim())
-              .filter(Boolean);
-            pairs.forEach((pair) => {
-              const [attr, key] = pair.split(":").map((s) => s.trim());
-              if (t[key] !== undefined) el.setAttribute(attr, t[key]);
-            });
-          });
-
-          renderLanguageUI();
-        } catch (e) {
-          console.error(e);
+          // Se usares atributos traduzíveis, podes ativar este bloco (opcional):
+          // document.querySelectorAll("[data-i18n-attr]").forEach(el => {
+          //   const spec = el.getAttribute("data-i18n-attr"); // "placeholder:prices.search.placeholder,aria-label:search.aria"
+          //   spec.split(",").map(s => s.trim()).filter(Boolean).forEach(pair => {
+          //     const [attr, key] = pair.split(":").map(s => s.trim());
+          //     if (t[key] !== undefined) el.setAttribute(attr, t[key]);
+          //   });
+          // });
+        } catch (err) {
+          console.error(err);
         }
       }
 
-      function renderLanguageUI() {
-        languageToggle.innerHTML = `<span>${currentLanguage.toUpperCase()}</span><i data-feather="refresh-cw" class="w-4 h-4"></i>`;
-        feather.replace();
+      function renderLanguageLabels() {
+        const leftDesk = document.getElementById("langLeft");
+        const rightDesk = document.getElementById("langRight");
+        const leftMob = document.getElementById("langLeftMobile");
+        const rightMob = document.getElementById("langRightMobile");
+
+        if (currentLanguage === "pt") {
+          leftDesk && (leftDesk.textContent = "PT");
+          rightDesk && (rightDesk.textContent = "FR");
+          leftMob && (leftMob.textContent = "PT");
+          rightMob && (rightMob.textContent = "FR");
+        } else {
+          leftDesk && (leftDesk.textContent = "FR");
+          rightDesk && (rightDesk.textContent = "PT");
+          leftMob && (leftMob.textContent = "FR");
+          rightMob && (rightMob.textContent = "PT");
+        }
       }
 
-      languageToggle.addEventListener("click", () => {
+      function toggleLanguage() {
         currentLanguage = currentLanguage === "pt" ? "fr" : "pt";
+        renderLanguageLabels();
         loadLanguage(currentLanguage);
-      });
+      }
 
-      renderLanguageUI();
-      loadLanguage(currentLanguage);
-
+      /* =========================
+     Fade-in on scroll
+  ========================== */
       const fadeElements = document.querySelectorAll(".fade-in");
-      const fadeInOnScroll = () => {
+      function fadeInOnScroll() {
         fadeElements.forEach((el) => {
           const elTop = el.getBoundingClientRect().top;
           const windowHeight = window.innerHeight;
           if (elTop < windowHeight - 100) el.classList.add("opacity-100");
         });
-      };
-      fadeInOnScroll();
-      window.addEventListener("scroll", fadeInOnScroll);
+      }
 
+      /* =========================
+     Formulário: Cliente ↔ Empresa
+  ========================== */
       (function () {
         const optParticular = document.getElementById("optParticular");
         const optEmpresa = document.getElementById("optEmpresa");
@@ -1391,9 +1507,12 @@ Observações adicionais: `;
 
         optEmpresa?.addEventListener("click", () => setMode(true));
         optParticular?.addEventListener("click", () => setMode(false));
-        setMode(false);
+        setMode(false); // estado inicial
       })();
 
+      /* =========================
+     Filtros dos serviços
+  ========================== */
       const buttons = document.querySelectorAll(".filter-btn");
       const cards = document.querySelectorAll("#servicesGrid .service-card");
       const search = document.getElementById("searchServices");
@@ -1403,7 +1522,8 @@ Observações adicionais: `;
           ".filter-btn[data-active='true']"
         );
         const filter = activeBtn ? activeBtn.dataset.filter : "all";
-        const q = (search.value || "").toLowerCase().trim();
+        const q = (search?.value || "").toLowerCase().trim();
+
         cards.forEach((card) => {
           const catOk = filter === "all" || card.dataset.cat === filter;
           const textOk = !q || card.dataset.name.includes(q);
@@ -1418,9 +1538,62 @@ Observações adicionais: `;
           applyFilters();
         });
       });
+      search?.addEventListener("input", applyFilters);
 
-      search.addEventListener("input", applyFilters);
-      feather.replace();
+      /* =========================
+     Drawer Mobile (fundo branco sólido)
+  ========================== */
+      const openBtn = document.getElementById("openMobileMenu");
+      const closeBtn = document.getElementById("closeMobileMenu");
+      const drawer = document.getElementById("mobileDrawer");
+      const overlay = document.getElementById("mobileOverlay");
+
+      function openDrawer() {
+        drawer.classList.remove("-translate-x-full");
+        drawer.classList.add("translate-x-0");
+        overlay.classList.remove("opacity-0", "pointer-events-none");
+        overlay.classList.add("opacity-100", "pointer-events-auto");
+        document.body.classList.add("overflow-hidden");
+        feather.replace(); // garante ícones visíveis no drawer
+      }
+
+      function closeDrawer() {
+        drawer.classList.add("-translate-x-full");
+        drawer.classList.remove("translate-x-0");
+        overlay.classList.add("opacity-0", "pointer-events-none");
+        overlay.classList.remove("opacity-100", "pointer-events-auto");
+        document.body.classList.remove("overflow-hidden");
+      }
+
+      openBtn?.addEventListener("click", openDrawer);
+      closeBtn?.addEventListener("click", closeDrawer);
+      overlay?.addEventListener("click", closeDrawer);
+      document
+        .querySelectorAll("#mobileDrawer a")
+        .forEach((a) => a.addEventListener("click", closeDrawer));
+
+      /* =========================
+     Botões de idioma (desktop + mobile)
+  ========================== */
+      const langBtnDesk = document.getElementById("languageToggle");
+      const langBtnMob = document.getElementById("languageToggleMobile");
+
+      langBtnDesk?.addEventListener("click", toggleLanguage);
+      langBtnMob?.addEventListener("click", () => {
+        toggleLanguage();
+        closeDrawer();
+      });
+
+      /* =========================
+     Inicialização
+  ========================== */
+      document.addEventListener("DOMContentLoaded", () => {
+        renderLanguageLabels();
+        loadLanguage(currentLanguage);
+        fadeInOnScroll();
+        window.addEventListener("scroll", fadeInOnScroll);
+        feather.replace();
+      });
     </script>
   </body>
 </html>

@@ -22,7 +22,7 @@
   "why.card1.title": "Confiança & Profissionalismo",
   "why.card1.body": "Certificada e com anos de experiência.",
   "why.card2.title": "Horário Noturno",
-  "why.card2.body": "Facilidade em marcação de horário",
+  "why.card2.body": "Facilidade em marcação de horário.",
   "why.card3.title": "Sessões Personalizadas",
   "why.card3.body": "Adaptadas às suas necessidades específicas.",
   "why.card4.title": "Ambiente Calmo",
@@ -135,7 +135,7 @@
 
   "contact.title": "Marcar Sessão",
   "contact.mode.label": "Tipo de marcação",
-  "contact.mode.private": "Particular",
+  "contact.mode.private": "Cliente",
   "contact.mode.company": "Sou uma empresa",
   "contact.form.name": "Nome",
   "contact.form.email": "Email",
