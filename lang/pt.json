@@ -12,11 +12,14 @@
   "hero.button": "Marcar Sessão",
 
   "about.title": "Sobre",
-  "about.lead": "A TM Massoterapeuta oferece sessões personalizadas que combinam técnicas manuais com uma abordagem natural e humana, promovendo relaxamento, alinhamento e recuperação.",
-  "about.card1.title": "Abordagem Holística",
-  "about.card1.body": "Cuidamos do corpo e da mente como um todo integrado.",
-  "about.card2.title": "Atendimento Personalizado",
-  "about.card2.body": "Cada sessão é adaptada às suas necessidades específicas.",
+  "about.lead": "Chamo-me Teresa Maia, sou Massoterapeuta e vivo em Amares (Braga). Formei-me na área de Gestão de Empresas, mas desde criança que sempre tive o gosto pela área da saúde músculo – esquelético. Em 2019, decidi arriscar neste meu sonho e fiz o meu primeiro curso de massagens (Massoterapia). Desde então, o meu gosto por esta área tem vindo a aumentar cada vez mais e, por isso, decidi prosseguir com mais alguns cursos relacionado à área das massagens e terapias manuais.",
+
+  "about.card1.title": "Formação e Certificações",
+  "about.card1.body": "Formação profissional em diversas instituições reconhecidas, incluindo: Instituto de Medicina Tradicional, CEFAD, Chinarte, Dietmed e Clínicas de Sucesso.",
+  "about.card2.title": "Abordagem Holística",
+  "about.card2.body": "O cuidado é visto como um processo integral — corpo, mente e energia em harmonia.",
+  "about.card3.title": "Atendimento Personalizado",
+  "about.card3.body": "Cada sessão é adaptada às necessidades e objetivos específicos de cada pessoa.",
 
   "why.title": "Porquê Escolher-nos",
   "why.card1.title": "Confiança & Profissionalismo",
@@ -105,6 +108,14 @@
   "serviceslist.pregpack.price": "780€",
   "serviceslist.pregpack.desc": "Acompanhamento completo na gestação.",
 
+  "prices.filters.packs": "Packs",
+  "serviceslist.pack4.title": "Plano Mensal — 4x por mês",
+  "serviceslist.pack4.desc": "Inclui quatro sessões de massagem por mês a preço reduzido.",
+  "serviceslist.pack4.price": "55€",
+  "serviceslist.pack8.title": "Plano Mensal — 8x por mês",
+  "serviceslist.pack8.desc": "Oito sessões mensais para quem procura manutenção contínua e bem-estar duradouro.",
+  "serviceslist.pack8.price": "75€",
+
   "services.title": "Serviços",
   "services.card1.title": "Massagem de Relaxamento",
   "services.card1.body": "Alivia o stress e solta tensões acumuladas.",
@@ -156,7 +167,7 @@
   "contact.info.sun": "Domingo",
   "contact.info.sun.hours": "Encerrado",
   "contact.info.location": "Localização",
-  "contact.info.address": "Rua São Pedro Fins, nº40, 4720-092<br />Braga, Portugal",
+  "contact.info.address": "Rua São Pedro Fins, nº40, 4720-092 - Braga, Portugal",
   "contact.info.note": "Atendimento por marcação. Possibilidade de horários alargados mediante disponibilidade.",
 
   "footer.copy": "&copy; 2025 Teresa Maia - Massoterapeuta. Todos os direitos reservados."

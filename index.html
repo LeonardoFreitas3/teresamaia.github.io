@@ -272,34 +272,61 @@
               Sobre
             </h2>
             <p class="text-lg mb-6" data-i18n="about.lead">
-              A TM Massoterapeuta oferece sessões personalizadas que combinam
-              técnicas manuais com uma abordagem natural e humana, promovendo
-              relaxamento, alinhamento e recuperação.
+              Chamo-me Teresa Maia, sou Massoterapeuta e vivo em Amares (Braga).
+              Formei-me na área de Gestão de Empresas, mas desde criança que
+              sempre tive o gosto pela área da saúde músculo – esquelético. Em
+              2019, decidi arriscar neste meu sonho e fiz o meu primeiro curso
+              de massagens (Massoterapia). Desde então, o meu gosto por esta
+              área tem vindo a aumentar cada vez mais e, por isso, decidi
+              prosseguir com mais alguns cursos relacionado à área das massagens
+              e terapias manuais.
             </p>
             <div class="space-y-4">
+              <div class="flex items-start space-x-4">
+                <div class="bg-sage bg-opacity-20 p-2 rounded-full">
+                  <i data-feather="award" class="text-sage"></i>
+                </div>
+                <div>
+                  <h3 class="font-semibold" data-i18n="about.card1.title">
+                    Formação e Certificações
+                  </h3>
+                  <p class="text-gray-600" data-i18n="about.card1.body">
+                    Formação profissional em diversas instituições reconhecidas,
+                    incluindo:
+                    <strong>Instituto de Medicina Tradicional</strong>,
+                    <strong>CEFAD</strong>, <strong>Chinarte</strong>,
+                    <strong>Dietmed</strong> e
+                    <strong>Clínicas de Sucesso</strong>.
+                  </p>
+                </div>
+              </div>
+
               <div class="flex items-start space-x-4">
                 <div class="bg-sage bg-opacity-20 p-2 rounded-full">
                   <i data-feather="heart" class="text-sage"></i>
                 </div>
                 <div>
-                  <h3 class="font-semibold" data-i18n="about.card1.title">
+                  <h3 class="font-semibold" data-i18n="about.card2.title">
                     Abordagem Holística
                   </h3>
-                  <p class="text-gray-600" data-i18n="about.card1.body">
-                    Cuidamos do corpo e da mente como um todo integrado.
+                  <p class="text-gray-600" data-i18n="about.card2.body">
+                    O cuidado é visto como um processo integral — corpo, mente e
+                    energia em harmonia.
                   </p>
                 </div>
               </div>
+
               <div class="flex items-start space-x-4">
                 <div class="bg-sage bg-opacity-20 p-2 rounded-full">
                   <i data-feather="user" class="text-sage"></i>
                 </div>
                 <div>
-                  <h3 class="font-semibold" data-i18n="about.card2.title">
+                  <h3 class="font-semibold" data-i18n="about.card3.title">
                     Atendimento Personalizado
                   </h3>
-                  <p class="text-gray-600" data-i18n="about.card2.body">
-                    Cada sessão é adaptada às suas necessidades específicas.
+                  <p class="text-gray-600" data-i18n="about.card3.body">
+                    Cada sessão é adaptada às necessidades e objetivos
+                    específicos de cada pessoa.
                   </p>
                 </div>
               </div>
@@ -332,7 +359,7 @@
             <div
               class="bg-sage bg-opacity-20 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto"
             >
-              <i data-feather="feather" class="text-sage w-8 h-8"></i>
+              <i data-feather="clock" class="text-sage"></i>
             </div>
             <h3 class="text-xl font-semibold mb-3" data-i18n="why.card2.title">
               Horário Noturno
@@ -384,7 +411,7 @@
             class="overflow-hidden rounded-2xl shadow-sm hover:shadow-md transition"
           >
             <img
-              src="img/galeria1.jpeg"
+              src="img/galeria5.jpg"
               alt="Massagem de relaxamento"
               class="w-full h-full object-cover hover:scale-[1.02] transition"
             />
@@ -393,7 +420,7 @@
             class="overflow-hidden rounded-2xl shadow-sm hover:shadow-md transition"
           >
             <img
-              src="img/galeria2.jpeg"
+              src="img/TM.PNG"
               alt="Terapia Deep Tissue"
               class="w-full h-full object-cover hover:scale-[1.02] transition"
             />
@@ -411,7 +438,7 @@
             class="overflow-hidden rounded-2xl shadow-sm hover:shadow-md transition"
           >
             <img
-              src="img/galeria4.jpeg"
+              src="img/galeria2.jpeg"
               alt="Técnicas manuais"
               class="w-full h-full object-cover hover:scale-[1.02] transition"
             />
@@ -420,7 +447,7 @@
             class="overflow-hidden rounded-2xl shadow-sm hover:shadow-md transition"
           >
             <img
-              src="img/galeria5.jpg"
+              src="img/galeria1.jpeg"
               alt="Cuidados e bem-estar"
               class="w-full h-full object-cover hover:scale-[1.02] transition"
             />
@@ -562,7 +589,14 @@
           >
             Corpo
           </button>
-
+          <button
+            type="button"
+            class="filter-btn px-4 py-2 rounded-full border border-sage text-sage data-[active=true]:bg-sage data-[active=true]:text-white"
+            data-filter="packs"
+            data-i18n="prices.filters.packs"
+          >
+            Packs
+          </button>
           <div class="ml-auto relative w-full md:w-72">
             <input
               id="searchServices"
@@ -583,10 +617,15 @@
             data-name="consulta de reiki reiki mente"
           >
             <header class="flex items-start justify-between mb-3">
-              <h3 class="font-semibold" data-i18n="serviceslist.reiki.title">
+              <h3
+                class="font-semibold text-sage"
+                data-i18n="serviceslist.reiki.title"
+              >
                 Consulta de Reiki
               </h3>
-              <span class="font-bold" data-i18n="serviceslist.reiki.price"
+              <span
+                class="font-bold text-sage"
+                data-i18n="serviceslist.reiki.price"
                 >30€</span
               >
             </header>
@@ -604,10 +643,15 @@
             data-name="limpeza de pele rosto"
           >
             <header class="flex items-start justify-between mb-3">
-              <h3 class="font-semibold" data-i18n="serviceslist.clean.title">
+              <h3
+                class="font-semibold text-sage"
+                data-i18n="serviceslist.clean.title"
+              >
                 Limpeza de Pele
               </h3>
-              <span class="font-bold" data-i18n="serviceslist.clean.price"
+              <span
+                class="font-bold text-sage"
+                data-i18n="serviceslist.clean.price"
                 >15€</span
               >
             </header>
@@ -625,10 +669,15 @@
             data-name="tratamento de acne rosto"
           >
             <header class="flex items-start justify-between mb-3">
-              <h3 class="font-semibold" data-i18n="serviceslist.acne.title">
+              <h3
+                class="font-semibold text-sage"
+                data-i18n="serviceslist.acne.title"
+              >
                 Tratamento de Acne
               </h3>
-              <span class="font-bold" data-i18n="serviceslist.acne.price"
+              <span
+                class="font-bold text-sage"
+                data-i18n="serviceslist.acne.price"
                 >25€</span
               >
             </header>
@@ -643,10 +692,15 @@
             data-name="tratamento de rugas rosto"
           >
             <header class="flex items-start justify-between mb-3">
-              <h3 class="font-semibold" data-i18n="serviceslist.wrinkles.title">
+              <h3
+                class="font-semibold text-sage"
+                data-i18n="serviceslist.wrinkles.title"
+              >
                 Tratamento de Rugas
               </h3>
-              <span class="font-bold" data-i18n="serviceslist.wrinkles.price"
+              <span
+                class="font-bold text-sage"
+                data-i18n="serviceslist.wrinkles.price"
                 >25€</span
               >
             </header>
@@ -664,10 +718,15 @@
             data-name="tratamento manchas de pele rosto"
           >
             <header class="flex items-start justify-between mb-3">
-              <h3 class="font-semibold" data-i18n="serviceslist.spots.title">
+              <h3
+                class="font-semibold text-sage"
+                data-i18n="serviceslist.spots.title"
+              >
                 Tratamento para Manchas da Pele
               </h3>
-              <span class="font-bold" data-i18n="serviceslist.spots.price"
+              <span
+                class="font-bold text-sage"
+                data-i18n="serviceslist.spots.price"
                 >25€</span
               >
             </header>
@@ -685,10 +744,15 @@
             data-name="massagem de relaxamento corpo relaxamento"
           >
             <header class="flex items-start justify-between mb-3">
-              <h3 class="font-semibold" data-i18n="serviceslist.relax.title">
+              <h3
+                class="font-semibold text-sage"
+                data-i18n="serviceslist.relax.title"
+              >
                 Massagem de Relaxamento
               </h3>
-              <span class="font-bold" data-i18n="serviceslist.relax.price"
+              <span
+                class="font-bold text-sage"
+                data-i18n="serviceslist.relax.price"
                 >20€</span
               >
             </header>
@@ -706,10 +770,15 @@
             data-name="massagem terapeutica deep tissue corpo"
           >
             <header class="flex items-start justify-between mb-3">
-              <h3 class="font-semibold" data-i18n="serviceslist.thera.title">
+              <h3
+                class="font-semibold text-sage"
+                data-i18n="serviceslist.thera.title"
+              >
                 Massagem Terapêutica
               </h3>
-              <span class="font-bold" data-i18n="serviceslist.thera.price"
+              <span
+                class="font-bold text-sage"
+                data-i18n="serviceslist.thera.price"
                 >17€</span
               >
             </header>
@@ -727,10 +796,15 @@
             data-name="massagem desportiva corpo"
           >
             <header class="flex items-start justify-between mb-3">
-              <h3 class="font-semibold" data-i18n="serviceslist.sport.title">
+              <h3
+                class="font-semibold text-sage"
+                data-i18n="serviceslist.sport.title"
+              >
                 Massagem Desportiva
               </h3>
-              <span class="font-bold" data-i18n="serviceslist.sport.price"
+              <span
+                class="font-bold text-sage"
+                data-i18n="serviceslist.sport.price"
                 >20€</span
               >
             </header>
@@ -748,10 +822,15 @@
             data-name="massagem para gravidas corpo"
           >
             <header class="flex items-start justify-between mb-3">
-              <h3 class="font-semibold" data-i18n="serviceslist.preg.title">
+              <h3
+                class="font-semibold text-sage"
+                data-i18n="serviceslist.preg.title"
+              >
                 Massagem para Grávidas
               </h3>
-              <span class="font-bold" data-i18n="serviceslist.preg.price"
+              <span
+                class="font-bold text-sage"
+                data-i18n="serviceslist.preg.price"
                 >20€</span
               >
             </header>
@@ -766,10 +845,15 @@
             data-name="massagem modeladora corpo"
           >
             <header class="flex items-start justify-between mb-3">
-              <h3 class="font-semibold" data-i18n="serviceslist.model.title">
+              <h3
+                class="font-semibold text-sage"
+                data-i18n="serviceslist.model.title"
+              >
                 Massagem Modeladora
               </h3>
-              <span class="font-bold" data-i18n="serviceslist.model.price"
+              <span
+                class="font-bold text-sage"
+                data-i18n="serviceslist.model.price"
                 >20€</span
               >
             </header>
@@ -787,10 +871,15 @@
             data-name="drenagem linfatica corpo"
           >
             <header class="flex items-start justify-between mb-3">
-              <h3 class="font-semibold" data-i18n="serviceslist.lymph.title">
+              <h3
+                class="font-semibold text-sage"
+                data-i18n="serviceslist.lymph.title"
+              >
                 Drenagem Linfática
               </h3>
-              <span class="font-bold" data-i18n="serviceslist.lymph.price"
+              <span
+                class="font-bold text-sage"
+                data-i18n="serviceslist.lymph.price"
                 >30€</span
               >
             </header>
@@ -808,10 +897,15 @@
             data-name="quiropraxia corpo"
           >
             <header class="flex items-start justify-between mb-3">
-              <h3 class="font-semibold" data-i18n="serviceslist.chiro.title">
+              <h3
+                class="font-semibold text-sage"
+                data-i18n="serviceslist.chiro.title"
+              >
                 Quiropraxia
               </h3>
-              <span class="font-bold" data-i18n="serviceslist.chiro.price"
+              <span
+                class="font-bold text-sage"
+                data-i18n="serviceslist.chiro.price"
                 >30€</span
               >
             </header>
@@ -825,14 +919,19 @@
 
           <article
             class="service-card bg-white p-6 rounded-xl shadow-sm border border-gray-100"
-            data-cat="corpo"
+            data-cat="packs"
             data-name="pack noivas corpo"
           >
             <header class="flex items-start justify-between mb-3">
-              <h3 class="font-semibold" data-i18n="serviceslist.bride.title">
+              <h3
+                class="font-semibold text-sage"
+                data-i18n="serviceslist.bride.title"
+              >
                 Pack Noivas
               </h3>
-              <span class="font-bold" data-i18n="serviceslist.bride.price"
+              <span
+                class="font-bold text-sage"
+                data-i18n="serviceslist.bride.price"
                 >35€</span
               >
             </header>
@@ -846,14 +945,19 @@
 
           <article
             class="service-card bg-white p-6 rounded-xl shadow-sm border border-gray-100"
-            data-cat="corpo"
+            data-cat="packs"
             data-name="pack gravidas 6 meses corpo"
           >
             <header class="flex items-start justify-between mb-3">
-              <h3 class="font-semibold" data-i18n="serviceslist.pregpack.title">
+              <h3
+                class="font-semibold text-sage"
+                data-i18n="serviceslist.pregpack.title"
+              >
                 Pack Grávidas (6 meses)
               </h3>
-              <span class="font-bold" data-i18n="serviceslist.pregpack.price"
+              <span
+                class="font-bold text-sage"
+                data-i18n="serviceslist.pregpack.price"
                 >780€</span
               >
             </header>
@@ -862,6 +966,58 @@
               data-i18n="serviceslist.pregpack.desc"
             >
               Acompanhamento completo na gestação.
+            </p>
+          </article>
+          <article
+            class="service-card bg-white p-6 rounded-xl shadow-sm border border-gray-100"
+            data-cat="packs"
+            data-name="plano mensal 4 sessões pack"
+          >
+            <header class="flex items-start justify-between mb-3">
+              <h3
+                class="font-semibold text-sage"
+                data-i18n="serviceslist.pack4.title"
+              >
+                Plano Mensal — 4x por mês
+              </h3>
+              <span
+                class="font-bold text-sage"
+                data-i18n="serviceslist.pack4.price"
+                >55€</span
+              >
+            </header>
+            <p
+              class="text-sm text-gray-600"
+              data-i18n="serviceslist.pack4.desc"
+            >
+              Inclui quatro sessões de massagem por mês a preço reduzido.
+            </p>
+          </article>
+
+          <article
+            class="service-card bg-white p-6 rounded-xl shadow-sm border border-gray-100"
+            data-cat="packs"
+            data-name="plano mensal 8 sessões pack"
+          >
+            <header class="flex items-start justify-between mb-3">
+              <h3
+                class="font-semibold text-sage"
+                data-i18n="serviceslist.pack8.title"
+              >
+                Plano Mensal — 8x por mês
+              </h3>
+              <span
+                class="font-bold text-sage"
+                data-i18n="serviceslist.pack8.price"
+                >75€</span
+              >
+            </header>
+            <p
+              class="text-sm text-gray-600"
+              data-i18n="serviceslist.pack8.desc"
+            >
+              Oito sessões mensais para quem procura manutenção contínua e
+              bem-estar duradouro.
             </p>
           </article>
         </div>
@@ -1014,7 +1170,7 @@
 
         <div class="mt-12">
           <a
-            href="#contactos?empresa=true"
+            href="#contactos"
             class="bg-sage hover:bg-sage/90 text-white px-8 py-3 rounded-full font-medium transition inline-flex items-center space-x-2 shadow-lg hover:shadow-xl"
             data-i18n="partners.cta"
             >Sou uma empresa — Pedir Orçamento</a
@@ -1353,7 +1509,8 @@
                       Localização
                     </h4>
                     <p class="text-gray-600" data-i18n="contact.info.address">
-                      Rua São Pedro Fins, nº40, 4720-092<br />Braga, Portugal
+                      Rua São Pedro Fins, nº40, 4720-092 <br />
+                      Braga, Portugal
                     </p>
                   </div>
                 </div>
@@ -1414,24 +1571,24 @@
 
       async function loadLanguage(lang) {
         try {
-          const res = await fetch(`lang/${lang}.json`, { cache: "no-store" });
+          const res = await fetch(`lang/${lang}.json`);
           if (!res.ok) throw new Error("Ficheiro de idioma não encontrado");
-          const t = await res.json();
+          const translations = await res.json();
 
-          // Substitui textos dos elementos
+          // 1️⃣ Tradução de texto normal (com HTML)
           document.querySelectorAll("[data-i18n]").forEach((el) => {
             const key = el.getAttribute("data-i18n");
-            if (t[key] !== undefined) el.textContent = t[key];
+            if (translations[key]) el.innerHTML = translations[key];
           });
 
-          // Se usares atributos traduzíveis, podes ativar este bloco (opcional):
-          // document.querySelectorAll("[data-i18n-attr]").forEach(el => {
-          //   const spec = el.getAttribute("data-i18n-attr"); // "placeholder:prices.search.placeholder,aria-label:search.aria"
-          //   spec.split(",").map(s => s.trim()).filter(Boolean).forEach(pair => {
-          //     const [attr, key] = pair.split(":").map(s => s.trim());
-          //     if (t[key] !== undefined) el.setAttribute(attr, t[key]);
-          //   });
-          // });
+          // 2️⃣ Tradução de atributos (como placeholder, title, alt, etc.)
+          document.querySelectorAll("[data-i18n-attr]").forEach((el) => {
+            const attrMap = el.getAttribute("data-i18n-attr").split(",");
+            attrMap.forEach((pair) => {
+              const [attr, key] = pair.split(":").map((s) => s.trim());
+              if (translations[key]) el.setAttribute(attr, translations[key]);
+            });
+          });
         } catch (err) {
           console.error(err);
         }

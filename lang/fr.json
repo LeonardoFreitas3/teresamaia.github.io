@@ -13,10 +13,13 @@
 
   "about.title": "À propos",
   "about.lead": "TM Massothérapeute propose des séances personnalisées alliant techniques manuelles et approche naturelle et humaine, favorisant la relaxation, l’alignement et la récupération.",
-  "about.card1.title": "Approche holistique",
-  "about.card1.body": "Nous prenons soin du corps et de l’esprit comme d’un tout intégré.",
-  "about.card2.title": "Accompagnement personnalisé",
-  "about.card2.body": "Chaque séance est adaptée à vos besoins spécifiques.",
+
+  "about.card1.title": "Formation et Certifications",
+  "about.card1.body": "Formation professionnelle dans plusieurs institutions reconnues, notamment : Institut de Médecine Traditionnelle, CEFAD, Chinarte, Dietmed et Cliniques de Succès.",
+  "about.card2.title": "Approche Holistique",
+  "about.card2.body": "Le soin est perçu comme un processus intégral — corps, esprit et énergie en harmonie.",
+  "about.card3.title": "Service Personnalisé",
+  "about.card3.body": "Chaque séance est adaptée aux besoins et aux objectifs spécifiques de chaque personne.",
 
   "why.title": "Pourquoi nous choisir",
   "why.card1.title": "Confiance & professionnalisme",
@@ -105,6 +108,14 @@
   "serviceslist.pregpack.price": "780 €",
   "serviceslist.pregpack.desc": "Accompagnement complet pendant la grossesse.",
 
+  "prices.filters.packs": "Forfaits",
+  "serviceslist.pack4.title": "Forfait Mensuel — 4x par mois",
+  "serviceslist.pack4.desc": "Inclut quatre séances de massage par mois à prix réduit.",
+  "serviceslist.pack4.price": "55€",
+  "serviceslist.pack8.title": "Forfait Mensuel — 8x par mois",
+  "serviceslist.pack8.desc": "Huit séances mensuelles pour un bien-être continu et durable.",
+  "serviceslist.pack8.price": "75€",
+
   "services.title": "Services",
   "services.card1.title": "Massage de relaxation",
   "services.card1.body": "Soulage le stress et libère les tensions accumulées.",
@@ -156,7 +167,7 @@
   "contact.info.sun": "Dimanche",
   "contact.info.sun.hours": "Fermé",
   "contact.info.location": "Localisation",
-  "contact.info.address": "Rua São Pedro Fins, nº40, 4720-092<br />Braga, Portugal",
+  "contact.info.address": "Rua São Pedro Fins, nº40, 4720-092 - Braga, Portugal",
   "contact.info.note": "Sur rendez-vous. Possibilité d’horaires étendus selon disponibilité.",
 
   "footer.copy": "&copy; 2025 Teresa Maia – Massothérapeute. Tous droits réservés."
