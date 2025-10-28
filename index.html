@@ -43,6 +43,15 @@
           @apply transition-opacity duration-500 opacity-0;
         }
       }
+
+      /* Corrige o bug de bg-fixed no iOS e Android */
+      @media (max-width: 768px) {
+        #inicio {
+          background-attachment: scroll !important;
+          background-position: center !important;
+          background-size: cover !important;
+        }
+      }
     </style>
   </head>
   <body class="font-sans text-dark bg-white">
