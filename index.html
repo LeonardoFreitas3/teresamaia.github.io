@@ -90,22 +90,17 @@
             >Serviços</a
           >
           <a
-            href="#galeria"
-            class="hover:text-sage transition"
-            data-i18n="nav.gallery"
-            >Galeria</a
-          >
-          <a
             href="#precos"
             class="hover:text-sage transition"
             data-i18n="nav.prices"
             >Preços</a
           >
+          <!-- NOVO: Parcerias -->
           <a
-            href="#testemunhos"
+            href="#parcerias"
             class="hover:text-sage transition"
-            data-i18n="nav.testimonials"
-            >Testemunhos</a
+            data-i18n="nav.partnerships"
+            >Parcerias</a
           >
           <a
             href="#contactos"
@@ -191,22 +186,17 @@
             >Serviços</a
           >
           <a
-            href="#galeria"
-            class="block px-3 py-2 rounded-lg hover:bg-gray-100"
-            data-i18n="nav.gallery"
-            >Galeria</a
-          >
-          <a
             href="#precos"
             class="block px-3 py-2 rounded-lg hover:bg-gray-100"
             data-i18n="nav.prices"
             >Preços</a
           >
+          <!-- NOVO: Parcerias -->
           <a
-            href="#testemunhos"
+            href="#parcerias"
             class="block px-3 py-2 rounded-lg hover:bg-gray-100"
-            data-i18n="nav.testimonials"
-            >Testemunhos</a
+            data-i18n="nav.partnerships"
+            >Parcerias</a
           >
           <a
             href="#contactos"
@@ -216,7 +206,7 @@
           >
         </nav>
 
-        <!-- Botão de Idioma (Mobile) -->
+        <!-- Botão de Idioma (Mobile) + Ligar -->
         <div class="border-t px-5 py-4">
           <button
             id="languageToggleMobile"
@@ -318,7 +308,10 @@
                   <i data-feather="award" class="text-sage"></i>
                 </div>
                 <div>
-                  <h3 class="font-semibold" data-i18n="about.card1.title">
+                  <h3
+                    class="font-semibold text-lg"
+                    data-i18n="about.card1.title"
+                  >
                     Formação e Certificações
                   </h3>
                   <p class="text-gray-600" data-i18n="about.card1.body">
@@ -337,12 +330,15 @@
                   <i data-feather="heart" class="text-sage"></i>
                 </div>
                 <div>
-                  <h3 class="font-semibold" data-i18n="about.card2.title">
-                    Abordagem Holística
+                  <h3
+                    class="font-semibold text-lg"
+                    data-i18n="about.card2.title"
+                  >
+                    Bem-estar fisísco e emocional
                   </h3>
                   <p class="text-gray-600" data-i18n="about.card2.body">
-                    O cuidado é visto como um processo integral — corpo, mente e
-                    energia em harmonia.
+                    Dedicada a promover o bem-estar físico e emocional através
+                    de massagens terapêuticas e relaxantes.
                   </p>
                 </div>
               </div>
@@ -352,7 +348,10 @@
                   <i data-feather="user" class="text-sage"></i>
                 </div>
                 <div>
-                  <h3 class="font-semibold" data-i18n="about.card3.title">
+                  <h3
+                    class="font-semibold text-lg"
+                    data-i18n="about.card3.title"
+                  >
                     Atendimento Personalizado
                   </h3>
                   <p class="text-gray-600" data-i18n="about.card3.body">
@@ -677,11 +676,11 @@
           <button
             type="button"
             class="filter-btn px-4 py-2 rounded-full border border-sage text-sage data-[active=true]:bg-sage data-[active=true]:text-white"
-            data-filter="all"
+            data-filter="corpo"
             data-active="true"
-            data-i18n="prices.filters.all"
+            data-i18n="prices.filters.corpo"
           >
-            Todos
+            Corpo
           </button>
           <button
             type="button"
@@ -702,19 +701,12 @@
           <button
             type="button"
             class="filter-btn px-4 py-2 rounded-full border border-sage text-sage data-[active=true]:bg-sage data-[active=true]:text-white"
-            data-filter="corpo"
-            data-i18n="prices.filters.corpo"
-          >
-            Corpo
-          </button>
-          <button
-            type="button"
-            class="filter-btn px-4 py-2 rounded-full border border-sage text-sage data-[active=true]:bg-sage data-[active=true]:text-white"
             data-filter="packs"
             data-i18n="prices.filters.packs"
           >
             Packs
           </button>
+
           <div class="ml-auto relative w-full md:w-72">
             <input
               id="searchServices"
@@ -1717,11 +1709,12 @@ Observações adicionais: `;
         const activeBtn = document.querySelector(
           ".filter-btn[data-active='true']"
         );
-        const filter = activeBtn ? activeBtn.dataset.filter : "all";
+        // 🔹 Se não houver botão ativo, usa "corpo" como padrão
+        const filter = activeBtn ? activeBtn.dataset.filter : "corpo";
         const q = (search?.value || "").toLowerCase().trim();
 
         cards.forEach((card) => {
-          const catOk = filter === "all" || card.dataset.cat === filter;
+          const catOk = card.dataset.cat === filter;
           const textOk = !q || card.dataset.name.includes(q);
           card.classList.toggle("hidden", !(catOk && textOk));
         });
@@ -1734,7 +1727,13 @@ Observações adicionais: `;
           applyFilters();
         });
       });
+
       search?.addEventListener("input", applyFilters);
+
+      // 🔹 Garante que o filtro "corpo" é aplicado no carregamento
+      document.addEventListener("DOMContentLoaded", () => {
+        applyFilters();
+      });
 
       /* =========================
      Drawer Mobile (fundo branco sólido)
@@ -1789,6 +1788,7 @@ Observações adicionais: `;
         fadeInOnScroll();
         window.addEventListener("scroll", fadeInOnScroll);
         feather.replace();
+        applyFilters();
       });
     </script>
   </body>
