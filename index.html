@@ -84,16 +84,16 @@
             >Sobre</a
           >
           <a
-            href="#galeria"
-            class="hover:text-sage transition"
-            data-i18n="nav.gallery"
-            >Galeria</a
-          >
-          <a
             href="#servicos"
             class="hover:text-sage transition"
             data-i18n="nav.services"
             >Serviços</a
+          >
+          <a
+            href="#galeria"
+            class="hover:text-sage transition"
+            data-i18n="nav.gallery"
+            >Galeria</a
           >
           <a
             href="#precos"
@@ -185,16 +185,16 @@
             >Sobre</a
           >
           <a
-            href="#galeria"
-            class="block px-3 py-2 rounded-lg hover:bg-gray-100"
-            data-i18n="nav.gallery"
-            >Galeria</a
-          >
-          <a
             href="#servicos"
             class="block px-3 py-2 rounded-lg hover:bg-gray-100"
             data-i18n="nav.services"
             >Serviços</a
+          >
+          <a
+            href="#galeria"
+            class="block px-3 py-2 rounded-lg hover:bg-gray-100"
+            data-i18n="nav.gallery"
+            >Galeria</a
           >
           <a
             href="#precos"
@@ -367,63 +367,88 @@
       </div>
     </section>
 
-    <section class="py-20 bg-gray-50">
+    <section id="servicos" class="py-20 bg-gray-50">
       <div class="container mx-auto px-6">
-        <h2 class="text-3xl font-bold mb-12 text-center" data-i18n="why.title">
-          Porquê Escolher-nos
+        <h2
+          class="text-3xl font-bold mb-12 text-center"
+          data-i18n="services.title"
+        >
+          Serviços
         </h2>
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div class="text-center">
+        <div class="grid md:grid-cols-3 gap-8">
+          <div
+            class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition flex flex-col items-center text-center"
+          >
             <div
-              class="bg-sage bg-opacity-20 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto"
+              class="bg-sage bg-opacity-20 w-16 h-16 rounded-full flex items-center justify-center mb-6"
             >
-              <i data-feather="award" class="text-sage w-8 h-8"></i>
+              <i data-feather="activity" class="text-sage w-8 h-8"></i>
             </div>
-            <h3 class="text-xl font-semibold mb-3" data-i18n="why.card1.title">
-              Confiança & Profissionalismo
+            <h3
+              class="text-xl font-semibold mb-3"
+              data-i18n="services.card1.title"
+            >
+              Massagem de Relaxamento
             </h3>
-            <p class="text-gray-600" data-i18n="why.card1.body">
-              Certificada e com anos de experiência.
+            <p class="text-gray-600" data-i18n="services.card1.body">
+              Alivia o stress e solta tensões acumuladas.
             </p>
+            <div
+              class="mt-4 text-sm text-sage font-medium"
+              data-i18n="services.card1.time"
+            >
+              60-90 minutos
+            </div>
           </div>
-          <div class="text-center">
+
+          <div
+            class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition flex flex-col items-center text-center"
+          >
             <div
-              class="bg-sage bg-opacity-20 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto"
+              class="bg-sage bg-opacity-20 w-16 h-16 rounded-full flex items-center justify-center mb-6"
             >
-              <i data-feather="clock" class="text-sage"></i>
+              <i data-feather="target" class="text-sage w-8 h-8"></i>
             </div>
-            <h3 class="text-xl font-semibold mb-3" data-i18n="why.card2.title">
-              Horário Noturno
+            <h3
+              class="text-xl font-semibold mb-3"
+              data-i18n="services.card2.title"
+            >
+              Massagem Terapêutica
             </h3>
-            <p class="text-gray-600" data-i18n="why.card2.body">
-              Facilidade em marcação de horário.
+            <p class="text-gray-600" data-i18n="services.card2.body">
+              Trabalha zonas específicas e promove equilíbrio postural.
             </p>
+            <div
+              class="mt-4 text-sm text-sage font-medium"
+              data-i18n="services.card2.time"
+            >
+              60-90 minutos
+            </div>
           </div>
-          <div class="text-center">
+
+          <div
+            class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition flex flex-col items-center text-center"
+          >
             <div
-              class="bg-sage bg-opacity-20 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto"
+              class="bg-sage bg-opacity-20 w-16 h-16 rounded-full flex items-center justify-center mb-6"
             >
-              <i data-feather="users" class="text-sage w-8 h-8"></i>
+              <i data-feather="briefcase" class="text-sage w-8 h-8"></i>
             </div>
-            <h3 class="text-xl font-semibold mb-3" data-i18n="why.card3.title">
-              Sessões Personalizadas
+            <h3
+              class="text-xl font-semibold mb-3"
+              data-i18n="services.card3.title"
+            >
+              Massagens nas Empresas
             </h3>
-            <p class="text-gray-600" data-i18n="why.card3.body">
-              Adaptadas às suas necessidades específicas.
+            <p class="text-gray-600" data-i18n="services.card3.body">
+              Sessões de relaxamento e produtividade no ambiente corporativo.
             </p>
-          </div>
-          <div class="text-center">
             <div
-              class="bg-sage bg-opacity-20 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto"
+              class="mt-4 text-sm text-sage font-medium"
+              data-i18n="services.card3.time"
             >
-              <i data-feather="home" class="text-sage w-8 h-8"></i>
+              Sob orçamento
             </div>
-            <h3 class="text-xl font-semibold mb-3" data-i18n="why.card4.title">
-              Ambiente Calmo
-            </h3>
-            <p class="text-gray-600" data-i18n="why.card4.body">
-              Espaço tranquilo para relaxamento total.
-            </p>
           </div>
         </div>
       </div>
@@ -492,6 +517,68 @@
               class="w-full h-full object-cover hover:scale-[1.02] transition"
             />
           </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-12 text-center" data-i18n="why.title">
+          Porquê Escolher-nos
+        </h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="text-center">
+            <div
+              class="bg-sage bg-opacity-20 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto"
+            >
+              <i data-feather="award" class="text-sage w-8 h-8"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3" data-i18n="why.card1.title">
+              Confiança & Profissionalismo
+            </h3>
+            <p class="text-gray-600" data-i18n="why.card1.body">
+              Certificada e com anos de experiência.
+            </p>
+          </div>
+          <div class="text-center">
+            <div
+              class="bg-sage bg-opacity-20 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto"
+            >
+              <i data-feather="clock" class="text-sage"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3" data-i18n="why.card2.title">
+              Horário Noturno
+            </h3>
+            <p class="text-gray-600" data-i18n="why.card2.body">
+              Facilidade em marcação de horário.
+            </p>
+          </div>
+          <div class="text-center">
+            <div
+              class="bg-sage bg-opacity-20 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto"
+            >
+              <i data-feather="users" class="text-sage w-8 h-8"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3" data-i18n="why.card3.title">
+              Sessões Personalizadas
+            </h3>
+            <p class="text-gray-600" data-i18n="why.card3.body">
+              Adaptadas às suas necessidades específicas.
+            </p>
+          </div>
+          <div class="text-center">
+            <div
+              class="bg-sage bg-opacity-20 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto"
+            >
+              <i data-feather="home" class="text-sage w-8 h-8"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3" data-i18n="why.card4.title">
+              Ambiente Calmo
+            </h3>
+            <p class="text-gray-600" data-i18n="why.card4.body">
+              Espaço tranquilo para relaxamento total.
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -1055,94 +1142,7 @@
       </div>
     </section>
 
-    <section id="servicos" class="py-20 bg-gray-50">
-      <div class="container mx-auto px-6">
-        <h2
-          class="text-3xl font-bold mb-12 text-center"
-          data-i18n="services.title"
-        >
-          Serviços
-        </h2>
-        <div class="grid md:grid-cols-3 gap-8">
-          <div
-            class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition flex flex-col items-center text-center"
-          >
-            <div
-              class="bg-sage bg-opacity-20 w-16 h-16 rounded-full flex items-center justify-center mb-6"
-            >
-              <i data-feather="activity" class="text-sage w-8 h-8"></i>
-            </div>
-            <h3
-              class="text-xl font-semibold mb-3"
-              data-i18n="services.card1.title"
-            >
-              Massagem de Relaxamento
-            </h3>
-            <p class="text-gray-600" data-i18n="services.card1.body">
-              Alivia o stress e solta tensões acumuladas.
-            </p>
-            <div
-              class="mt-4 text-sm text-sage font-medium"
-              data-i18n="services.card1.time"
-            >
-              60-90 minutos
-            </div>
-          </div>
-
-          <div
-            class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition flex flex-col items-center text-center"
-          >
-            <div
-              class="bg-sage bg-opacity-20 w-16 h-16 rounded-full flex items-center justify-center mb-6"
-            >
-              <i data-feather="target" class="text-sage w-8 h-8"></i>
-            </div>
-            <h3
-              class="text-xl font-semibold mb-3"
-              data-i18n="services.card2.title"
-            >
-              Massagem Terapêutica
-            </h3>
-            <p class="text-gray-600" data-i18n="services.card2.body">
-              Trabalha zonas específicas e promove equilíbrio postural.
-            </p>
-            <div
-              class="mt-4 text-sm text-sage font-medium"
-              data-i18n="services.card2.time"
-            >
-              60-90 minutos
-            </div>
-          </div>
-
-          <div
-            class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition flex flex-col items-center text-center"
-          >
-            <div
-              class="bg-sage bg-opacity-20 w-16 h-16 rounded-full flex items-center justify-center mb-6"
-            >
-              <i data-feather="briefcase" class="text-sage w-8 h-8"></i>
-            </div>
-            <h3
-              class="text-xl font-semibold mb-3"
-              data-i18n="services.card3.title"
-            >
-              Massagens nas Empresas
-            </h3>
-            <p class="text-gray-600" data-i18n="services.card3.body">
-              Sessões de relaxamento e produtividade no ambiente corporativo.
-            </p>
-            <div
-              class="mt-4 text-sm text-sage font-medium"
-              data-i18n="services.card3.time"
-            >
-              Sob orçamento
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="parcerias" class="py-20 bg-white">
+    <section id="parcerias" class="py-20 bg-gray-50">
       <div class="container mx-auto px-6 text-center">
         <h2 class="text-3xl font-bold mb-12" data-i18n="partners.title">
           Parcerias
@@ -1210,7 +1210,7 @@
       </div>
     </section>
 
-    <section id="testemunhos" class="py-20 bg-gray-50">
+    <section id="testemunhos" class="py-20 bg-white">
       <div class="container mx-auto px-6">
         <h2
           class="text-3xl font-bold mb-12 text-center"
@@ -1280,7 +1280,7 @@
       </div>
     </section>
 
-    <section id="contactos" class="py-20 bg-wghite">
+    <section id="contactos" class="py-20 bg-gray-50">
       <div class="container mx-auto px-6">
         <div class="flex flex-col md:flex-row gap-12">
           <div class="md:w-1/2">
