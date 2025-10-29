@@ -1279,7 +1279,12 @@
             <h2 class="text-3xl font-bold mb-6" data-i18n="contact.title">
               Marcar Sessão
             </h2>
-            <form id="bookingForm" class="space-y-6">
+            <form
+              id="bookingForm"
+              action="https://formspree.io/f/xvgvroja"
+              method="POST"
+              class="space-y-6"
+            >
               <div
                 class="bg-white border border-gray-200 p-3 rounded-lg flex items-center justify-between"
               >
@@ -1314,15 +1319,15 @@
               <div id="fieldsParticular" class="space-y-6">
                 <div>
                   <label
-                    for="name"
+                    for="nome"
                     class="block mb-1 font-medium"
                     data-i18n="contact.form.name"
                     >Nome</label
                   >
                   <input
                     type="text"
-                    id="name"
-                    name="name"
+                    id="nome"
+                    name="nome"
                     class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sage focus:border-transparent"
                   />
                 </div>
@@ -1344,29 +1349,29 @@
 
                 <div>
                   <label
-                    for="phone"
+                    for="telemovel"
                     class="block mb-1 font-medium"
                     data-i18n="contact.form.phone"
                     >Telefone</label
                   >
                   <input
                     type="tel"
-                    id="phone"
-                    name="phone"
+                    id="telemovel"
+                    name="telemovel"
                     class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sage focus:border-transparent"
                   />
                 </div>
 
                 <div>
                   <label
-                    for="message"
+                    for="mensagem"
                     class="block mb-1 font-medium"
                     data-i18n="contact.form.message"
                     >Mensagem</label
                   >
                   <textarea
-                    id="message"
-                    name="message"
+                    id="mensagem"
+                    name="mensagem"
                     rows="4"
                     class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sage focus:border-transparent"
                   ></textarea>
@@ -1376,59 +1381,59 @@
               <div id="fieldsEmpresa" class="space-y-6 hidden">
                 <div>
                   <label
-                    for="biz_name"
+                    for="nome_empresa"
                     class="block mb-1 font-medium"
                     data-i18n="contact.form.name"
                     >Nome</label
                   >
                   <input
                     type="text"
-                    id="biz_name"
-                    name="biz_name"
+                    id="nome_empresa"
+                    name="nome_empresa"
                     class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sage focus:border-transparent"
                   />
                 </div>
 
                 <div>
                   <label
-                    for="biz_email"
+                    for="email_empresa"
                     class="block mb-1 font-medium"
                     data-i18n="contact.form.email"
                     >Email</label
                   >
                   <input
                     type="email"
-                    id="biz_email"
-                    name="biz_email"
+                    id="email_empresa"
+                    name="email_empresa"
                     class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sage focus:border-transparent"
                   />
                 </div>
 
                 <div>
                   <label
-                    for="biz_phone"
+                    for="telemovel_empresa"
                     class="block mb-1 font-medium"
                     data-i18n="contact.form.phone"
                     >Telefone</label
                   >
                   <input
                     type="tel"
-                    id="biz_phone"
-                    name="biz_phone"
+                    id="telemovel_empresa"
+                    name="telemovel_empresa"
                     class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sage focus:border-transparent"
                   />
                 </div>
 
                 <div>
                   <label
-                    for="empresaMensagem"
+                    for="empresa_mensagem"
                     class="block mb-1 font-medium"
                     data-i18n="contact.form.quote"
                     >Pedir Orçamento</label
                   >
                   <textarea
-                    id="empresaMensagem"
-                    name="empresaMensagem"
+                    id="empresa_mensagem"
+                    name="empresa_mensagem"
                     rows="6"
                     class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sage focus:border-transparent"
                   ></textarea>
@@ -1449,6 +1454,9 @@
               >
                 Enviar Pedido de Marcação
               </button>
+
+              <!-- Feedback -->
+              <p id="formStatus" class="mt-3 text-sm"></p>
             </form>
           </div>
 
@@ -1669,7 +1677,7 @@
         const fieldsParticular = document.getElementById("fieldsParticular");
         const fieldsEmpresa = document.getElementById("fieldsEmpresa");
         const submitBtn = document.getElementById("submitBtn");
-        const empresaMensagem = document.getElementById("empresaMensagem");
+        const empresa_mensagem = document.getElementById("empresa_mensagem");
 
         const templateOrcamento = `Olá, gostaria de solicitar um orçamento para massagens nas nossas instalações.
 Empresa: 
@@ -1688,8 +1696,8 @@ Observações adicionais: `;
           submitBtn.textContent = isEmpresa
             ? "Pedir Orçamento"
             : "Enviar Pedido de Marcação";
-          if (isEmpresa && empresaMensagem && !empresaMensagem.value.trim()) {
-            empresaMensagem.value = templateOrcamento;
+          if (isEmpresa && empresa_mensagem && !empresa_mensagem.value.trim()) {
+            empresa_mensagem.value = templateOrcamento;
           }
         }
 
@@ -1778,6 +1786,100 @@ Observações adicionais: `;
         toggleLanguage();
         closeDrawer();
       });
+
+      // CONTACT FORM + VALIDATION
+      (function () {
+        const form = document.getElementById("bookingForm");
+        const status = document.getElementById("formStatus");
+
+        if (!form) return;
+
+        // Funções de validação
+        const validateEmail = (email) =>
+          /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
+
+        const validatePhone = (phone) =>
+          /^(\+?\d{1,3}[-\s]?)?(\(?\d{2,3}\)?[-\s]?)?\d{3,4}[-\s]?\d{3,4}$/.test(
+            phone.trim()
+          );
+
+        form.addEventListener("submit", async (e) => {
+          e.preventDefault();
+
+          status.classList.remove("hidden");
+          status.textContent =
+            currentLanguage === "fr" ? "Envoi en cours…" : "A enviar…";
+
+          // Obtém campos ativos (Cliente ou Empresa)
+          const isEmpresa = !document
+            .getElementById("fieldsEmpresa")
+            .classList.contains("hidden");
+
+          const emailField = form.querySelector(
+            isEmpresa ? "#email_empresa" : "#email"
+          );
+          const phoneField = form.querySelector(
+            isEmpresa ? "#telemovel_empresa" : "#telemovel"
+          );
+
+          // Verificação de email
+          if (!validateEmail(emailField.value)) {
+            status.textContent =
+              currentLanguage === "fr"
+                ? "Veuillez saisir un e-mail valide."
+                : "Por favor, insira um e-mail válido.";
+            emailField.focus();
+            return;
+          }
+
+          // Verificação de telefone
+          if (!validatePhone(phoneField.value)) {
+            status.textContent =
+              currentLanguage === "fr"
+                ? "Veuillez saisir un numéro de téléphone valide."
+                : "Por favor, insira um número de telefone válido.";
+            phoneField.focus();
+            return;
+          }
+
+          // Se tudo ok → Enviar formulário
+          try {
+            const res = await fetch(form.action, {
+              method: "POST",
+              headers: { Accept: "application/json" },
+              body: new FormData(form),
+            });
+
+            if (res.ok) {
+              form.reset();
+              status.textContent =
+                currentLanguage === "fr"
+                  ? "Merci ! Votre message a été envoyé avec succès."
+                  : "Obrigado! A sua mensagem foi enviada.";
+            } else {
+              const data = await res.json().catch(() => ({}));
+              status.textContent =
+                data?.errors && data.errors.length
+                  ? data.errors.map((e) => e.message).join(", ")
+                  : currentLanguage === "fr"
+                  ? "Une erreur est survenue. Veuillez réessayer."
+                  : "Ocorreu um erro. Tente novamente.";
+            }
+          } catch (err) {
+            console.error(err);
+            status.textContent =
+              currentLanguage === "fr"
+                ? "Problème de connexion ou erreur du serveur. Veuillez réessayer."
+                : "Sem ligação ou erro do servidor. Tente novamente.";
+          }
+
+          // Esconde mensagem após 5s
+          setTimeout(() => {
+            status.textContent = "";
+            status.classList.add("hidden");
+          }, 5000);
+        });
+      })();
 
       /* =========================
      Inicialização
