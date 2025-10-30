@@ -2,22 +2,44 @@
 <html lang="pt-PT">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title data-i18n="hero.title">Teresa Maia</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+
+    <!-- Title focado em serviço + localização -->
+    <title>
+      Massagens terapêuticas e relaxantes em Amares (Braga) | Teresa Maia
+    </title>
+
+    <!-- Meta description clara e única -->
     <meta
       name="description"
-      content="Massoterapia holística para corpo, mente e bem-estar. Sessões personalizadas em ambiente calmo e profissional."
+      content="Massoterapia em Amares (Braga) por Teresa Maia: massagens terapêuticas e relaxantes, alívio de dor muscular e redução de stress, em ambiente calmo e profissional."
     />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- Indexação e apresentação -->
+    <meta
+      name="robots"
+      content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    />
+    <!-- Substitui pelo teu domínio final quando tiveres (GitHub Pages ou domínio próprio) -->
+    <link rel="canonical" href="https://teresamaiamassoterapeuta.com /" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+    <meta name="theme-color" content="#3B7C7A" />
+
+    <!-- Performance: fontes e CSS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind config -->
     <script>
       tailwind.config = {
         theme: {
@@ -27,13 +49,90 @@
               sage: "#3B7C7A",
               dark: "#0F172A",
             },
-            fontFamily: {
-              sans: ["Poppins", "sans-serif"],
-            },
+            fontFamily: { sans: ["Poppins", "sans-serif"] },
           },
         },
       };
     </script>
+
+    <!-- Feather (uma vez apenas) -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"
+    ></script>
+
+    <!-- Preload da imagem hero para LCP mais rápido -->
+    <link
+      rel="preload"
+      as="image"
+      href="img/galeria2.jpeg"
+      imagesrcset="img/galeria2.jpeg"
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Teresa Maia — Massoterapia" />
+    <meta
+      property="og:title"
+      content="Massagens terapêuticas e relaxantes em Amares (Braga) | Teresa Maia"
+    />
+    <meta
+      property="og:description"
+      content="Massoterapia holística em Amares (Braga): terapêutica, relaxamento, alívio de dor e redução de stress."
+    />
+    <meta property="og:url" content="https://teresamaiamassoterapeuta.com /" />
+    <meta property="og:image" content="img/og-hero.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Massagens terapêuticas e relaxantes em Amares (Braga) | Teresa Maia"
+    />
+    <meta
+      name="twitter:description"
+      content="Massoterapia com foco em alívio de dor e bem-estar. Marcação rápida."
+    />
+    <meta name="twitter:image" content="img/og-hero.jpg" />
+    <!-- opcional: @username -->
+    <!-- <meta name="twitter:site" content="@teuUtilizador" /> -->
+
+    <!-- Hreflang (se tiveres versões separadas por URL; se for SPA bilíngue no mesmo URL, mantém comentado) -->
+    <!--
+  <link rel="alternate" href="https://teresamaiamassoterapeuta.com /" hreflang="pt" />
+  <link rel="alternate" href="https://teresamaiamassoterapeuta.com /fr/" hreflang="fr" />
+  <link rel="alternate" href="https://teresamaiamassoterapeuta.com /" hreflang="x-default" />
+  -->
+
+    <!-- JSON-LD: LocalBusiness / MassageTherapist -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "MassageTherapist",
+        "name": "Teresa Maia — Massoterapeuta",
+        "image": "https://teresamaiamassoterapeuta.com/img/og-hero.jpg",
+        "url": "https://teresamaiamassoterapeuta.com/",
+        "telephone": "+351936601502",
+        "priceRange": "€€",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Rua São Pedro Fins, nº40",
+          "postalCode": "4720-092",
+          "addressLocality": "Braga",
+          "addressCountry": "PT"
+        },
+        "areaServed": "Amares, Braga",
+        "description": "Massagens terapêuticas e relaxantes, com foco em alívio de dor muscular e redução de stress.",
+        "sameAs": [
+          "https://www.instagram.com/terapeuta_teresamaia?igsh=cGZwbzBiZHRteXM=",
+          "https://www.facebook.com/p/Teresa-Maia-Massoterapeuta-100063623797380/"
+        ]
+      }
+    </script>
+
+    <!-- Estilos utilitários locais -->
     <style type="text/tailwindcss">
       @layer utilities {
         .circle-accent {
@@ -43,7 +142,6 @@
           @apply transition-opacity duration-500 opacity-0;
         }
       }
-
       /* Corrige o bug de bg-fixed no iOS e Android */
       @media (max-width: 768px) {
         #inicio {
@@ -54,6 +152,7 @@
       }
     </style>
   </head>
+
   <body class="font-sans text-dark bg-white">
     <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-sm shadow-sm">
       <div
@@ -1281,7 +1380,7 @@
             </h2>
             <form
               id="bookingForm"
-              action="https://formspree.io/f/xvgvroja"
+              action="https://formspree.io/f/xvgvbokp"
               method="POST"
               class="space-y-6"
             >
